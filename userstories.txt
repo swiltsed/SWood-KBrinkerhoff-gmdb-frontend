@@ -1,0 +1,24 @@
+As a user, I want to be able to browse movies anonomously
+Given: I want to find a movie without logging in
+When: I open the website
+Then: Movies are browsable
+
+As a user, I want look at a specific movie with details and reviews
+Given: I find a movie
+When: I select a movie
+Then: The Movies details and reviews are displayed
+
+As a user, I want the ability to search for movies
+Given: I know of a movie I want to watch
+When: I when I input a phrase or word
+Then: Then movie titles matching search term will be displayed
+
+As a user, I want to be able to post a review of a movie
+Given: I have selected a movie 
+When: I enter a new review
+Then: It is displayed on the movie details
+
+As a user, I want to have a profile/account
+Given: I enter my log in details
+When: I submit them
+Then: I will be able to log in with them
