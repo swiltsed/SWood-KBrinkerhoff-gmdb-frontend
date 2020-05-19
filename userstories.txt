@@ -47,18 +47,19 @@
     Then: The detail page refreshes
 
 
-5. As a user, I want to have a profile/account
-    Given: I want to create an account
+5. As a user, I want to log into my account
+    Given: I want to go to the log in page
+    AND: I am on the landing page
     When: I click the login button
     Then: A new page will open
-    AND: the page will display input fields for entering a username and password and a submit button
-    AND: the page will display a link for creating a new account
-
-    Given: I want to create  my desired login credentials
-    AND: I am on the login page
-    WHEN: I click the link for creating a new account
-    THEN: a new page will open
-    AND: the page will have a field for inputting a username
-    AND: the page will have a field for entering a password
-    AND: the page will have a field for re-entering the password
-    AND: the page will have a button to submit the new credentials
+    AND: the page will display input field for entering a username 
+    AND: the page will display input field for entering password  
+    AND: the page will display a submit button
+        
+    Given: I want to log in 
+    AND: I am on the Login page
+    When: I enter my valid username in the username field
+    AND: I enter my valid password in the password field 
+    AND: I click the login button
+    Then: I will get a message that I am logged in
+    

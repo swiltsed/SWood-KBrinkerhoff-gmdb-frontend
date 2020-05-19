@@ -10,7 +10,7 @@ function flushPromises() {
 // });
 
 test('finds returned data from server', () => {
-  let wrapper = shallow(<App/>);
+  const wrapper = shallow(<App/>);
   const posterName = 'https://m.media-amazon.com/images/M/MV5BMTQzMDEyODYwNF5BMl5BanBnXkFtZTgwOTcxMDgwMjE@._V1_SX300.jpg';
   const fetchMock = jest.fn();
   const oldFetch = global.fetch;
@@ -34,6 +34,18 @@ test('finds returned data from server', () => {
 
   global.fetch = oldFetch
   
+})
+
+
+
+test('I will see a section displaying movies by poster images', () => {
+
+})
+
+test('The header will show the title GMDB', () => {
+  const wrapper = shallow(<App/>);
+  //mock the call to get all the movie info?
+  expect(wrapper.exists("header-title")).toEqual("GMDB")
 })
 
 /*

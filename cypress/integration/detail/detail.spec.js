@@ -42,12 +42,27 @@ describe("Detail page", () => {
         //NOTE: use a smaller subset of the movie catalog so test can run faster, maybe 20 or so
         //NOTE: use a search term that will not match any title in the movie catalog
         // We will need to open the detail page of a particular movie
-        
+
         // cy.enter(in search input field using a search-term for movies NOT on the site).submit
         // cy.(get the title attributes of the search results).put them in an array
         // cy.compare(iterating through the entire catalog array, the titles of the search results).should('not contain','search-term')
         // cy.get(whatever contains the message about no results).should('contain', 'error message text')
       })
 
+      it("displays the contents of a submitted review", () => {
+        // We will need to open the detail page of a particular movie
+        // We will need to input a value in the comment field
+        // We will need to submit the value        
+
+        // cy.get('displayed comment').should.('contain', 'new Comment')
+        })
+
+        it("lets me log in from a detail page")
+        // We will need to open the detail page of a particular movie
+        // from detail page, click login link
+        // on login page, enter valid credentials and submit
+
+        // cy.get(login message).should('contain','successful login message' )
+        })
 
 }) // end of describe

@@ -44,4 +44,10 @@ it("searches for movies that are NOT available on the site", () => {
   // cy.get(whatever contains the message about no results).should('contain', 'error message text')
 })
 
+it("lets me log in from the home page")
+// from home page, click login link
+// on login page, enter valid credentials and submit
+
+// cy.get(login message).should('contain','successful login message' )
+
 }) // end of describe
