@@ -1,24 +1,77 @@
-As a user, I want to be able to browse movies anonomously
-Given: I want to find a movie without logging in
-When: I open the website
-Then: Movies are browsable
+1. As a user, I want to be able to browse movies anonomously
+Given: I want to find movies on the web
+When: I open the GMDB website
+Then: I will see a page with a header
+AND: The header will show the title GMDB
+AND: The header will show a search field with submit button labeled "Search"
+AND: The header will show a login link
+AND: The header will show a Home link
+AND: I will see a section displaying movies by poster images
 
-As a user, I want look at a specific movie with details and reviews
-Given: I find a movie
-When: I select a movie
-Then: The Movies details and reviews are displayed
+Given: I am on the landing page
+When: I go to the movie section
+Then: I can browse through the section using the navigation bar
+AND: I can browse through the section using the mouse wheel
 
-As a user, I want the ability to search for movies
-Given: I know of a movie I want to watch
-When: I when I input a phrase or word
-Then: Then movie titles matching search term will be displayed
+2. As a user, I want look at a specific movie with details and reviews
+Given: I find a movie I want to view in detail
+When: I mouse click a specific movie
+Then: I will see a new page  with the same header as the home page
+AND: I will see a link "Back to results"
+AND: will see a section containing the movie poster
+AND: the section will show the details about the movie
+AND: the section will have a field for entering text labeled "Leave a comment"
+AND: The section will have a button labeled "Submit"
 
-As a user, I want to be able to post a review of a movie
-Given: I have selected a movie 
-When: I enter a new review
-Then: It is displayed on the movie details
+3. As a user, I want the ability to search for movies
+Given: I am on the home page of the GMDB site
+When: I when I input a phrase or word in the search field 
+AND: the phrase matches one or more movies available on the site
+AND: I mouse-click the "Search" button
+Then: Then the posters of movie titles matching search term will be displayed in the movie section of the home page
 
-As a user, I want to have a profile/account
-Given: I enter my log in details
-When: I submit them
-Then: I will be able to log in with them
+Given: I am on the home page of the GMDB site
+When: I when I input a phrase or word in the search field
+AND: the phrase does not match any movie available on the site
+AND: I mouse-click the "Search" button
+Then: I get a message indicating there were no matches found
+
+Given: I am on a detail page on the GMDB site
+When: I when I input a phrase or word in the search field 
+AND: the phrase matches one or more movies available on the site
+AND: I mouse-click the "Search" button
+Then: Then the posters of movie titles matching search term will be displayed in the movie section of the home page
+
+Given: I am on a detail page on the GMDB site
+When: I when I input a phrase or word in the search field
+AND: the phrase does not match any movie available on the site
+AND: I mouse-click the "Search" button
+Then: I get a message indicating there were no matches found
+
+
+4. As a user, I want to be able to post a review of a movie
+Given: I am on the detail page for a movie 
+When: I enter a new review in the "Leave a Comment" field
+AND: I mouse-click the Submit button
+Then: the comment is displayed on the movie details page
+
+Given: I am on the detail page for a movie 
+When: I  mouse-click the Submit button without an entry in the "Leave a Comment" input field
+Then: The detail page refreshes
+
+
+5. As a user, I want to have a profile/account
+Given: I want to create an account
+When: I click the login button
+Then: A new page will open
+AND: the page will display input fields for entering a username and password and a submit button
+AND: the page will display a link for creating a new account
+
+Given: I want to create  my desired login credentials
+AND: I am on the login page
+WHEN: I click the link for creating a new account
+THEN: a new page will open
+AND: the page will have a field for inputting a username
+AND: the page will have a field for entering a password
+AND: the page will have a field for re-entering the password
+AND: the page will have a button to submit the new credentials
