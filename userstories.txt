@@ -1,0 +1,65 @@
+1. As a user, I want to be able to browse movies anonomously
+    Given: I want to find movies on the web
+    When: I open the GMDB website
+    Then: I will see a page with a header
+    AND: The header will show the title GMDB
+    AND: The header will show a search field with submit button labeled "Search"
+    AND: The header will show a login link
+    AND: The header will show a Home link
+    AND: I will see a section displaying movies by poster images
+
+    Given: I am on the GMDB landing page
+    When: I go to the movie section
+    Then: I can browse through the section using the navigation bar
+    AND: I can browse through the section using the mouse wheel
+
+2. As a user, I want look at a specific movie with details and reviews
+    Given: I am on the home page of the GMDB site
+    When: I mouse click a specific movie from the home
+    Then: I will see a new page  with the same header as the home page
+    AND: I will see a link "Back to results"
+    AND: will see a section containing the movie poster
+    AND: the section will show the details about the movie
+    AND: the section will have a field for entering text labeled "Leave a comment"
+    AND: The section will have a button labeled "Submit"
+
+3. As a user, I want the ability to search for movies
+    Given: I am on the home page of the GMDB site
+    When: I when I input a phrase or word in the search field 
+    AND: the phrase matches one or more movies available on the site
+    AND: I mouse-click the "Search" button
+    Then: Then the posters of movie titles matching search term will be displayed in the movie section of the home page
+
+    Given: I am on the home page of the GMDB site
+    When: I when I input a phrase or word in the search field
+    AND: the phrase does not match any movie available on the site
+    AND: I mouse-click the "Search" button
+    Then: I get a message indicating there were no matches found
+
+4. As a user, I want to be able to post a review of a movie
+    Given: I am on the detail page for a movie 
+    When: I enter a new review in the "Leave a Comment" field
+    AND: I mouse-click the Submit button
+    Then: the comment is displayed on the movie details page
+
+    Given: I am on the detail page for a movie 
+    When: I  mouse-click the Submit button without an entry in the "Leave a Comment" input field
+    Then: The detail page refreshes
+
+
+5. As a user, I want to log into my account
+    Given: I want to go to the log in page
+    AND: I am on the landing page
+    When: I click the login button
+    Then: A new page will open
+    AND: the page will display input field for entering a username 
+    AND: the page will display input field for entering password  
+    AND: the page will display a submit button
+        
+    Given: I want to log in 
+    AND: I am on the Login page
+    When: I enter my valid username in the username field
+    AND: I enter my valid password in the password field 
+    AND: I click the login button
+    Then: I will get a message that I am logged in
+    
